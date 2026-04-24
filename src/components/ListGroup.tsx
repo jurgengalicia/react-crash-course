@@ -1,12 +1,19 @@
 function ListGroup() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  items = [];
+
   return (
-    <ul className="list-group">
-      <li className="list-group-item">item 1</li>
-      <li className="list-group-item">item 2</li>
-      <li className="list-group-item">item 3</li>
-      <li className="list-group-item">item 4</li>
-      <li className="list-group-item">item 5</li>
-    </ul>
+    <>
+      <h1>List</h1>
+      {items.length === 0 && <p>no items found</p>}
+      <ul className="list-group">
+        {items.map((item) => (
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
