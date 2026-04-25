@@ -21,7 +21,6 @@ export default function Button({
       onClick={() => {
         setSelectedIndex(incrementButton);
         onBtnClick();
-        console.log(selectedIndex);
       }}
       className={`btn btn-${buttonNames[selectedIndex]}`}
     >
